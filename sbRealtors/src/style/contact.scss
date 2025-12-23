@@ -1,0 +1,127 @@
+@import "../assets/scss/mixin";
+@import "../assets/scss/variable";
+
+
+.contact {
+    background: $color-black;
+
+    .contact-z {
+        position: relative;
+        z-index: 3;
+    }
+
+    h2 {
+        width: fit-content;
+        color: $color-white;
+        font-size: $font-50 !important;
+        border-bottom: 2px solid $color-beige;
+        padding-bottom: 5px;
+        margin-bottom: 25px;
+    }
+
+    .contact-no {
+        font-size: $font-36;
+        font-weight: 700;
+        margin-bottom: 15px;
+        
+        a {
+            text-decoration: none;
+            color: $color-beige;
+        }
+    }
+
+    p,
+    address {
+        color: $color-white;
+        font-size: $font-22;
+        margin-bottom: 15px;
+
+        .title-yel {
+            color: $color-beige;
+            font-weight: 600;
+        }
+        a{
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+
+    address {
+        line-height: 1.6;
+    }
+
+    form {
+
+        .form-control,
+        textarea {
+            padding: 13px 20px;
+            font-size: $font-18;
+            border-radius: $radius-10;
+            border: none;
+            color: $color-black;
+            box-shadow: none;
+
+            &::placeholder {
+                color: $color-form;
+            }
+        }
+
+        textarea {
+            height: 113px;
+        }
+
+        .row {
+            row-gap: 35px;
+        }
+
+    }
+
+    .primaryBtn {
+        background: $color-beige;
+            border: 1px solid $color-beige;
+
+        &:hover {
+            background: $color-white !important;
+            border: 1px solid $color-beige;
+
+            .pb-circle {
+                background: $color-beige;
+            }
+
+            p {
+                color: $color-beige;
+            }
+        }
+    }
+
+
+    /* Responsive ----------------------------*/
+    @media (max-width: 768px) {
+        // padding: 60px 0;
+
+        form .row {
+            row-gap: 18px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .contact-no {
+            font-size: $font-25;
+        }
+
+        address {
+            font-size: $font-1rem;
+        }
+
+        h2 {
+            font-size: $font-30 !important;
+        }
+
+        p {
+            font-size: $font-18;
+        }
+    }
+    .contact-info {
+    img{width: 30px; height: auto;}
+    }
+}

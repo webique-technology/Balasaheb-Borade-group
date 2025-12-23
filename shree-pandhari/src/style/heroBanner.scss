@@ -1,0 +1,77 @@
+@import "../assets/scss/variable.scss";
+@import "../assets/scss/mixin.scss";
+
+.hero-banner {
+    width: 100%;
+    position: relative;
+
+    .hero-bg {
+        @include flex(row, center, center, 0);
+        width: 100%;
+        height: 786px;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 0;
+        }
+    }
+
+    .hero-contant {
+        position: relative;
+        z-index: 2;
+
+        h1 {
+            color: $color-white;
+            font-size: $hero-h1;
+            font-weight: 700;
+
+            span {
+                color: transparent;
+                -webkit-text-stroke: 2px $color-white;
+            }
+        }
+
+        h4 {
+            color: $color-primery-yellow;
+            margin-bottom: 25px;
+        }
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media(max-width:768px) {
+        h1 {
+            font-size: $font-50 !important;
+        }
+
+        .hero-bg {
+            height: 596px;
+
+        }
+    }
+
+    @media(max-width:576px) {
+        .hero-bg {
+            height: 450px;
+        }
+
+        h1 {
+            font-size: $font-36 !important;
+
+            span {
+                -webkit-text-stroke: 1px $color-white !important;
+            }
+        }
+    }
+}

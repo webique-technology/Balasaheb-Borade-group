@@ -1,0 +1,709 @@
+@import "../scss/mixin";
+@import "../scss/variable";
+@import "../scss/button";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-white;
+}
+
+.site-main {
+    min-height: 60vh;
+}
+
+// .secH2 {}
+
+h2,
+.title2 {
+    font-size: $font-40;
+    font-weight: 400;
+    line-height: 56px;
+
+    span {
+        color: $color-primery-orange;
+    }
+
+    // letter-spacing: 3px;
+    @media(max-width:768px) {
+        font-size: $font-40;
+        line-height: 46px;
+
+    }
+
+    @media(max-width:576px) {
+        font-size: $font-36;
+    }
+}
+
+p {
+    font-size: clamp(1rem, 0.5676rem + 0.6757vw, 1.125rem);
+    font-weight: 300;
+    line-height: clamp(1.5rem, 6.5vw + 1rem, 30px);
+}
+
+.section-padding {
+    padding: clamp(40px, 6.5vw + 1rem, 6rem) 0;
+}
+
+.subTitle {
+    color: $color-primery-orange;
+    font-family: "Tilt Warp", sans-serif !important;
+
+}
+
+.map {
+    height: 195px;
+}
+
+.white {
+    color: $color-white;
+}
+
+// stock type slider sec 1
+
+.stock-type-slider {
+    width: 100%;
+    position: relative;
+
+    .se-slider {
+        padding: 45px 20px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        margin-top: -120px;
+        position: relative;
+        z-index: 5;
+
+        h3 {
+            margin: 0;
+            font-size: $font-30;
+            font-weight: 700;
+        }
+
+        .se-title {
+            width: 350px;
+        }
+
+        .trade-card {
+            width: 100%;
+            background: $color-white;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 20px 20px;
+            height: 134px !important;
+            margin: 10px 0 30px;
+            border-radius: $radius-5;
+            @include flex(column, center, space-between, 3px);
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+                min-height: 65px;
+            }
+        }
+
+        .swiper {
+            width: 100%;
+
+            .swiper-slide {
+                @include flex(row, center, center, 0)
+            }
+        }
+    }
+
+
+    // @media (max-width: 768px) {
+    //     .se-slider {}
+    // }
+
+    @media (max-width: 576px) {
+        .swiper {
+            width: 100%;
+        }
+
+        .se-slider {
+            padding: 30px 0 0;
+
+            .trade-card {
+                h5 {
+                    font-size: $font-1rem;
+                }
+
+                img {
+                    width: 45px;
+                }
+            }
+        }
+    }
+}
+
+// about-us
+
+.about-us {
+    width: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1250px;
+        height: 593px;
+        background-image: url("../images/about_bg.png");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        opacity: 0.4;
+    }
+
+    b {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .about-img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: " ";
+            background-image: url("../images/stock_old_man.png");
+            top: 0;
+            left: 0;
+            width: 286px;
+            height: 386px;
+            background-repeat: no-repeat;
+        }
+
+        &::before {
+            position: absolute;
+            content: " ";
+            background-image: url("../images/stock_young_man.png");
+            bottom: 0;
+            right: 0;
+            width: clamp(55%, 2vw, 852px);
+            height: 271px;
+            z-index: 1;
+            padding: 1px;
+            background-repeat: no-repeat;
+        }
+
+        .experience {
+            padding: 20px;
+            width: 159px;
+            height: 159px;
+            border-radius: 50%;
+            color: $color-white;
+            position: absolute;
+            z-index: 2;
+            border: 2px solid $color-white;
+            background: $color-primery-orange;
+            @include flex(column, center, center, 0);
+            top: 50%;
+            left: 50%;
+            transform: translate(-20%, -100%);
+
+            h4 {
+                font-size: $font-40;
+                font-weight: 800;
+            }
+
+            p {
+                margin: 0;
+                line-height: 20px;
+                font-weight: 500;
+
+            }
+        }
+
+        @media(max-width:1200px) {
+            .experience {
+                transform: translate(-90%, -10%);
+            }
+        }
+
+        @media(max-width:992px) {
+            height: 500px;
+
+            &::after {
+                left: 10%;
+            }
+
+            .experience {
+                transform: translate(-50%, -90%);
+            }
+        }
+
+        @media(max-width:576px) {
+            &::after {
+                left: 0;
+            }
+
+            .experience {
+                transform: translate(-15%, -100%);
+            }
+        }
+    }
+
+    @media(max-width:1440px) {
+        &::before {
+            width: 100%;
+        }
+    }
+
+    @media(max-width:992px) {
+        &::before {
+            width: 100%;
+            content: none;
+        }
+
+        b {
+            font-size: $font-1rem;
+        }
+    }
+}
+        @media (max-width: 768px) {
+            .about-us .about-img .experience {
+                transform: translate(-20%, -97%);
+            }
+        }
+// feature section
+.feartue-sec {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: " ";
+        background-image: url("../images/feature-bg.png");
+        width: 100%;
+        height: 686px;
+        z-index: 2;
+        opacity: 0.1;
+        top: 0;
+    }
+
+    &::before {
+        content: " ";
+        width: 100%;
+        height: 100%;
+        background: $color-bg-blue;
+        position: absolute;
+        visibility: 0.1;
+        top: 0;
+    }
+
+    .featrue-count {
+        position: relative;
+        z-index: 4;
+
+        h2 {
+            color: $color-white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            @media(max-width:992px){
+                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            }
+        }
+
+        .feature-card {
+            background: $color-bg-blue;
+            border-radius: $radius-15;
+            border: 1px solid $color-white;
+            padding: 1px;
+            width: 100%;
+            height: 100%;
+
+            .feature-content {
+                height: 100%;
+                display: grid;
+                gap: 20px;
+                grid-template-rows: auto auto 1fr;
+                border-radius: $radius-15;
+                padding: 40px 20px;
+                color: $color-white;
+                background: $color-bg-blue;
+
+                p {
+                    font-size: $font-1rem;
+                    color: $color-gray-font;
+                }
+
+                .ft-card-img {
+                    position: relative;
+                    margin-bottom: 20px;
+
+                    &::before {
+                        content: "";
+                        background: rgb(255 255 255 / 16%);
+                        width: 62px;
+                        height: 62px;
+                        position: absolute;
+                        bottom: -15px;
+                        left: 30px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background: $color-primery-orange;
+                padding: 1px 6px 1px 1px;
+                scale: 1.01;
+                border: 1px solid $color-primery-orange;
+            }
+        }
+
+        @media(max-width:768px) {
+            .feature-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 1rem;
+            }
+
+            .feature-card {
+                height: 100%;
+                flex: 0 0 90%;
+            }
+        }
+    }
+
+    .feture-earth {
+        position: absolute;
+        top: -60px;
+        right: 0;
+    }
+}
+
+// choose us
+.choose-us {
+
+    .choose-row {
+        position: relative;
+
+        &::after {
+            background-image: url("../images/choose_earth.png");
+            content: " ";
+            width: 166px;
+            height: 123px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-repeat: no-repeat;
+            animation: floatUpDown 4s ease-in-out infinite;
+
+            @keyframes floatUpDown {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-100px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(-300) rotate(180deg);
+    }
+    75% {
+        transform: translateY(-200px) rotate(270deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+             @media(max-width:768px) {
+                display: none;
+            }
+
+        }
+
+        &::before {
+            content: " ";
+            background-image: url("../images/choose_us_img.png");
+            width: 678px;
+            height: 467px;
+            position: absolute;
+            right: 30px;
+            top: 90px;
+            border-bottom: 2px solid $color-black;
+
+            @media(max-width:1200px) {
+                width: 50%;
+            }
+
+            @media(max-width:992px) {
+                top: 160px;
+            }
+
+            @media(max-width:768px) {
+                content: none;
+            }
+        }
+    }
+}
+
+// trade varitey
+.trade-variety {
+    .trade-varitey-count {
+        position: relative;
+        background-size: cover;
+        border-radius: $radius-15;
+        // width: 100%;
+        height: 100%;
+
+        .video {
+            min-width: 100%;
+            width: 100%;
+            min-height: 100%;
+            border-radius: $radius-15;
+        }
+
+        .trade-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            @include flex(column, flex-start, flex-end, 0);
+            padding: 50px;
+
+            .trade-info {
+                width: fit-content;
+            }
+
+            .trade-count {
+                width: 678px;
+                background: $color-black;
+                opacity: 0.8;
+                padding: 35px 20px;
+                border-radius: $radius-15;
+
+                h2 {
+                    margin: 0 !important;
+                }
+
+                span {
+                    font-size: $font-25;
+                    // margin-bottom: 20px;
+                    font-weight: 800;
+                }
+
+                p {
+                    color: $color-gray-font;
+                    font-size: $font-1rem;
+                }
+
+                .count-up {
+                    border-bottom: 1px solid $color-gray-font;
+                }
+
+                .invest-slider {
+                    .invastor-card {
+                        padding: 10px;
+                        border: 1px solid $color-gray-font;
+                        @include flex(row, center, center, 0);
+                    }
+                }
+
+                @media(max-width:768px) {
+                    padding: 30px 19px;
+
+                    img {
+                        width: 55px;
+                    }
+
+                    p {
+                        font-size: $font-12;
+                        margin-bottom: 14px !important;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+
+        @media(max-width:992px) {
+
+            .trade-info {
+                width: 100% !important;
+            }
+
+            .trade-count {
+                width: 100% !important;
+            }
+
+            .trade-content {
+                position: static;
+                padding: 10px 0;
+
+                h2 {
+                    color: $color-black;
+                }
+            }
+        }
+    }
+     @media(max-width:768px){padding: 0;}
+}
+
+// crypto currency
+.crypto-cur {
+    // .crypto-tab {
+    //     width: 800px;
+
+    //     button {
+    //         width: 100%;
+    //         height: 100%;
+    //         padding: 10px 25px;
+    //         border: 1px solid $color-primery-orange;
+    //         color: $color-primery-orange;
+    //         background: none;
+    //         border-radius: $radius-5;
+    //         transition: all ease 0.25s;
+
+    //         p {
+    //             margin: 0;
+    //             font-size: $font-20;
+    //         }
+
+    //         &:hover {
+    //             scale: 1.01;
+    //         }
+    //     }
+
+    //     .active {
+    //         color: $color-white;
+    //         background: $color-primery-orange;
+    //         scale: 1.01;
+    //     }
+
+    //     @media(max-width:768px) {
+    //         width: 100%;
+
+    //         button {
+    //             padding: 5px 10px;
+
+    //             p {
+    //                 font-size: $font-1rem;
+    //             }
+    //         }
+    //     }
+    // }
+
+    .crypto-tab {
+  width: 800px;
+
+  .crypto-btn {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 25px;
+    border: 1px solid $color-primery-orange;
+    background: transparent;
+    border-radius: $radius-5;
+    cursor: pointer;
+
+    p {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      font-size: $font-20;
+      color: $color-primery-orange;
+      transition: color 0.25s ease;
+    }
+  }
+
+  .active-pill {
+    position: absolute;
+    inset: 0;
+    background: $color-primery-orange;
+    border-radius: $radius-5;
+    z-index: 1;
+  }
+
+  .active p {
+    color: $color-white;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    .crypto-btn {
+      padding: 6px 10px;
+
+      p {
+        font-size: $font-1rem;
+      }
+    }
+  }
+}
+
+
+    .crypto-count {
+        .card {
+            display: grid;
+            grid-template-rows: auto auto 1fr;
+            height: 100%;
+            gap: 20px;
+            padding: 25px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid $color-primery-orange;
+            border-radius: 0;
+
+            .card-title {
+                font-size: $font-22;
+                color: $color-black;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            .card-top {
+                width: 100%;
+                @include flex(row, center, flex-end, 0);
+
+                span {
+                    font-size: $font-50;
+                    font-family: "Philosopher", sans-serif;
+                    font-weight: 700;
+                    color: $color-gray-font;
+
+                    @media(max-width:768px) {
+                        display: none;
+                }
+                }
+            }
+
+            img {
+                width: 31px;
+                height: 50px;
+                margin-bottom: 50px;
+            }
+
+            .card-text {
+                font-size: clamp(0.75rem, 1.5vw + 1rem, $font-15);
+            }
+
+            @media(max-width:768px) {
+                gap: 0;
+
+                .card-title {
+                    font-size: $font-18;
+                }
+            }
+        }
+    }
+}

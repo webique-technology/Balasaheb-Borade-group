@@ -1,0 +1,29 @@
+[
+
+  {
+    "label": "Home",
+    "path": "/"
+
+  },
+  {
+    "label": "About",
+    "path": "/about"
+
+  },
+
+   {
+    "label": "Companies",
+    "path": "/companies"
+
+  },
+  {
+    "label": "Gallery",
+    "path": "/gallery"
+
+  },
+  {
+    "label": "Contact",
+    "path": "/contact"
+
+  }
+]

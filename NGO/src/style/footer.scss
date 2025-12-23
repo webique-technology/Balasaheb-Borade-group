@@ -1,0 +1,61 @@
+@import"../assets/scss/variable";
+@import "../assets/scss/mixin";
+
+.footer {
+    background: $color-background-black;
+    padding: 25px 0;
+
+    p {
+        color: $color-white;
+        margin: 0;
+        font-size: $font-1rem;
+
+        span {
+            color: $color-primery-orange;
+        }
+
+        a {
+            color: $color-primery-yellow;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s ease;
+
+            &:hover {
+                color: scale($color-primery-yellow, 10%);
+            }
+        }
+    }
+
+    .f-right {
+        color: $color-white;
+
+        a {
+            color: $color-primery-orange;
+        }
+    }
+
+    /* Social icons */
+    img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+    }
+
+    @media (max-width: 768px) {
+        text-align: center;
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 26px;
+            height: 26px;
+        }
+    }
+}

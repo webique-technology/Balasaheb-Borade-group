@@ -1,0 +1,676 @@
+@import "../scss/mixin";
+@import "../scss/variable";
+@import "../scss/global";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-white;
+}
+
+.site-main {
+    min-height: 60vh;
+}
+
+// .secH2 {}
+
+h2,
+.title2 {
+    font-size: $font-50;
+    font-weight: 400;
+    font-weight: 700;
+    line-height: 56px;
+
+    // letter-spacing: 3px;
+    @media(max-width:768px) {
+        font-size: $font-40;
+        line-height: 46px;
+
+    }
+
+    @media(max-width:576px) {
+        font-size: $font-36;
+    }
+}
+
+p {
+    font-size: clamp(1rem, 0.5676rem + 0.6757vw, 1.125rem);
+    font-weight: 300;
+    line-height: clamp(1.5rem, 6.5vw + 1rem, 25px);
+}
+
+.section-padding {
+    padding: 95px 0;
+
+    @media(max-width:768px) {
+        padding: 60px 0;
+    }
+
+    @media(max-width:576px) {
+        padding: 40px 0;
+    }
+}
+
+// use or whatsapp btn 
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: $color-white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 36px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    @include flex(row, center, center, 0);
+    text-decoration: none;
+    z-index: 1000;
+}
+
+// scroll top
+.scrollTop {
+    position: fixed;
+    bottom: 90px;
+    right: 23px;
+    border: 0;
+    border-radius: 50%;
+    background-color: $color-primery-yellow;
+    color: $color-white;
+    font-size: $font-30;
+    @include flex(row, center, space-between, 10px);
+    padding: 10px;
+    font-size: 36px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+// header btn
+.primaryBtn {
+    @include flex(row, center, space-between, 10px);
+    padding: 12px 15px;
+    width: fit-content;
+    border-radius: $radius-10;
+    background-color: $color-button-green;
+    color: $color-white;
+    border: none;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    // .pb-circle {
+    //     @include flex(row, center, center, 0);
+    //     border-radius: 50%;
+    //     background-color: #4B4A4A45;
+    //     width: 36px;
+    //     height: 36px;
+    //     transition: all 0.2s ease;
+
+    //     .icon {
+    //         @include flex(row, center, center, 0);
+    //     }
+
+    //     svg {
+    //         transform: rotate(45deg);
+    //         transition: transform 0.2s ease;
+    //     }
+    // }
+
+    &:hover {
+        background-color: $color-primery-orange !important;
+
+        .pb-circle {
+            background-color: #6e6e6eff;
+
+            svg {
+                transform: rotate(90deg);
+
+            }
+        }
+    }
+}
+
+// secondry btn
+.secondryBtn {
+    padding: 10px 25px;
+    border: 1px solid $color-white;
+    border-radius: $radius-35;
+    color: $color-white;
+    text-decoration: none;
+    @include flex(row, center, center, 0);
+
+    p {
+        font-size: $font-18;
+        font-family: "Poppins", sans-serif;
+    }
+
+    img {
+        width: 20px;
+    }
+}
+
+.titleRound {
+    padding: 6px 10px;
+    border: 1px solid $color-black;
+    width: fit-content;
+    border-radius: 50px;
+
+    p {
+        font-size: $font-18;
+    }
+}
+
+.map {
+    height: 195px;
+}
+
+// about us 
+.about-us {
+    .vm-card {
+        height: 100%;
+        background: $color-gray;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+     @media(max-width:767px) {padding-bottom: 0 !important;}
+}
+
+
+.connectSec {
+    font-family: "AR One Sans", sans-serif;
+
+    span {
+        border-radius: 50%;
+        background: $color-primery-orange;
+        padding: 10px;
+
+        svg {
+            color: $color-white;
+        }
+    }
+
+    p {
+        font-size: $font-15;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-black;
+        font-size: $font-18;
+    }
+
+     @media(max-width:767px) {gap:20px}
+}
+
+// services section 
+.our-services {
+    .services-card-count {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(197px, 1fr));
+        gap: 49px;
+
+        .services-card {
+            border: 2px dashed;
+            padding: 20px 30px;
+            text-align: center;
+            border-radius: $radius-10;
+            height: 100%;
+            @include flex(column, center, center, 30px);
+
+            .card-top {
+                width: fit-content;
+                background: $color-black;
+                border-radius: 50%;
+                padding: 20px;
+                margin-top: 40px;
+
+                @media(max-width:768px) {
+                    margin-top: 10px;
+                }
+
+            }
+
+            .card-body {
+                display: grid;
+                grid-template-rows: auto 1fr;
+
+                p {
+                    font-size: $font-1rem;
+
+                    span {
+                        font-size: $font-20;
+                        font-weight: 700;
+                    }
+                }
+
+                b {
+                    font-size: $font-20;
+                }
+            }
+
+            @media(max-width:576px) {
+                margin: 0 12px;
+                gap: 10px;
+
+                .card-top {
+                    padding: 15px;
+                    img {
+                        width: 38px;
+                    }
+                }
+                b{
+                    font-size: $font-18 !important;
+                }
+            }
+        }
+
+        @media(max-width:992px) {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        @media(max-width:768px) {
+            display: flex !important;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 1rem;
+
+            .services-card {
+                flex: 0 0 80%;
+            }
+        }
+    }
+
+
+}
+
+// count-up
+.count-up {
+    background: $color-pink;
+
+    .count-card {
+        // border: 2px solid $color-dark-pink;
+        width: 100%;
+        height: 100%;
+        border-radius: $radius-10;
+        padding: 30px 22px;
+
+        .count-img {
+            border: 2px dashed $color-white;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        span {
+            font-size: $font-40;
+            font-weight: 700;
+            color: $color-white;
+            line-height: 45px;
+        }
+
+        box-shadow: rgba(149, 157, 165, 0.2);
+
+        p {
+            color: $color-white;
+            font-size: $font-20;
+        }
+
+        @media(max-width:576px) {
+            span {
+                font-size: $font-36;
+            }
+
+            p {
+                font-size: $font-15;
+            }
+        }
+    }
+
+}
+
+// donation
+.donation {
+    background: $color-gray;
+
+    .donation-qr {
+        position: absolute;
+        width: 200px;
+        left: 20px;
+        bottom: 0px;
+
+        @media(max-width:1200px) {
+            width: 240px;
+            left: 20px;
+            bottom: 60px;
+        }
+
+
+        @media (max-width: 992px) {
+            width: 250px;
+            left: 20px;
+            bottom: -40px;
+        }
+
+        @media(max-width:768px) {
+            position: relative;
+            width: 250px;
+            left: 0 !important;
+            bottom: 0 !important;
+        }
+    }
+}
+
+// work section
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    gap: 20px;
+
+    .work-card {
+        width: 100%;
+        border-radius: $radius-15;
+        height: 561px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $color-white;
+        position: relative;
+        overflow: hidden;
+
+        .card-body {
+            width: 100%;
+            @include flex(column, flex-start, center, 10px);
+            padding: 40px 20px 80px;
+            border-radius: $radius-15;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(70px);
+            transition: all 0.3s ease-in-out;
+
+            h5 {
+                font-size: $font-25 !important;
+            }
+
+            .progress-bar {
+                width: 190px;
+                height: 15px;
+                background: $color-white;
+                border-radius: $radius-10;
+            }
+        }
+
+        &:hover {
+            .card-body {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .wp-cardb img {
+        width: 100%;
+        display: block;
+        cursor: pointer;
+    }
+
+    .wp-cardb .wpc-info {
+        pointer-events: none;
+    }
+
+    .wpc-info * {
+        pointer-events: auto;
+    }
+
+    .progress-wrapper {
+        height: 15px;
+        padding: 2px;
+        width: 100%;
+        background: $color-white;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress-inner {
+        height: 100%;
+        background: #fff;
+        border-radius: 5px;
+        transition: width 0.5s ease-in-out;
+    }
+
+
+    @media(max-width:992px) {
+        display: flex !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+
+        .work-card {
+            flex: 0 0 60%;
+        }
+    }
+
+    @media(max-width:786px) {
+        .work-card {
+            height: 400px;
+        }
+    }
+
+    @media(max-width:576px) {
+        .work-card {
+            flex: 0 0 80%;
+        }
+    }
+
+}
+
+// causes container
+.causes-sec {
+    .wp-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+        gap: 20px;
+    }
+
+    .wp-card {
+        border-radius: $radius-10;
+        // overflow: hidden;/
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        justify-items: center;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            margin: 0;
+            color: white;
+        }
+
+        .wp-card {
+            width: 100%;
+        }
+
+        .wp-cardb {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .wp-cardb img {
+            width: 100%;
+            display: block;
+        }
+
+        /* INFO OVERLAY */
+        .wpc-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: $font-18;
+            background: #1c1c1c;
+            color: white;
+            padding: 20px 20px 40px;
+            @include flex(column, flex-start, flex-end, 0);
+            transform: translateY(100%);
+            opacity: 0;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+
+            .wp-inner {
+                width: 100%;
+                height: 100%;
+                @include flex(column, flex-start, flex-end, 0);
+                position: relative;
+
+                .light-box-open {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 15px;
+                    border-radius: 50%;
+                    border: 0;
+                    background: none;
+                    color: $color-white;
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover {
+                        scale: 1.1;
+                    }
+                }
+            }
+        }
+
+        /* On hover → SLIDE UP */
+        .wp-cardb:hover {
+            // filter: brightness(0.7); 
+
+            .wpc-info {
+                transform: translateY(0);
+                opacity: 0.8;
+                /* adjust as needed */
+            }
+        }
+
+        .wpc-info p {
+            margin-bottom: 1rem;
+        }
+
+        .wpc-info .rs-badge {
+            background: #616060;
+            color: #ffffff;
+            padding: 15px 25px;
+            display: inline-block;
+            font-family: "Poppins", sans-serif;
+        }
+
+    }
+    
+
+    @media (max-width: 992px) {
+        .wp-card {
+            .wpc-info {
+                padding: 20px !important;
+                font-size: $font-18 !important;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .wp-cards-grid {
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 15px;
+        }
+
+        .wp-card {
+            .wpc-info {
+                padding: 15px !important;
+
+                .rs-badge {
+                    padding: 10px;
+                }
+
+                p {
+                    font-size: $font-15 !important;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+}
+
+// light box
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    cursor: zoom-out;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 48px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100000;
+    font-weight: 300;
+}
+
+// team
+.team {
+    background: $color-bg-orange;
+
+    .titleRound {
+        color: $color-primery-orange;
+        border: 1px solid $color-primery-orange;
+    }
+
+    .team-lead-grid {
+        .team-lead-card {
+            b {
+                font-size: $font-20;
+            }
+        }
+    }
+
+    @media(max-width:768px) {
+        .team-lead-grid {
+            display: flex !important;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 1rem;
+
+            .team-lead-card {
+                flex: 0 0 48%;
+            }
+        }
+    }
+}

@@ -21,8 +21,8 @@ const isMobile = window.innerWidth <= 768;
 
 
 const team = [
-  { src: bBorade, name: "Balasaheb Borade", designation: "Chairman" },
-  { src: savitaBorade, name: "Savita Balasaheb Borade", designation: "Director" },
+  { src: bBorade, name: "Shree. Balasaheb Borade", designation: "Chairman" },
+  { src: savitaBorade, name: "Smt. Savita Balasaheb Borade", designation: "Director" },
   { src: "", name: "Name of Person", designation: "" },
   { src: "", name: "Name of Person", designation: "" },
 ];

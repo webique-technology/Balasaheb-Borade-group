@@ -17,10 +17,10 @@ const slideRight = {
 const introData = [
   {
     id: 1,
-    title: "Balasaheb  Borade",
+    title: "Shri. Balasaheb  Borade",
     subtitle: "A decade of trusted leadership built on clarity, discipline, and impactful governance.",
     content:
-      "<p>Balasaheb Pandarinath Borade has 11 years in corporate governance. Holds Director and Designated Partner roles. Currently with 5 companies, including SB Realtor and Shree Pandhari Infrastructures Private Limited. Engaged in General Business. Contributes to corporate operations.</p><p>Balasaheb Pandarinath Borade leads with clarity, discipline, and integrity—shaping responsible, transparent, and growth-focused businesses rooted in trust, commitment, and long-term impact.Balasaheb Pandarinath Borade leads with clarity.</p>",
+      "<p>Shri. Balasaheb Pandarinath Borade has 11 years in corporate governance. Holds Director and Designated Partner roles. Currently with 5 companies, including SB Realtor and Shree Pandhari Infrastructures Private Limited. Engaged in General Business. Contributes to corporate operations.</p><p>Balasaheb Pandarinath Borade leads with clarity, discipline, and integrity—shaping responsible, transparent, and growth-focused businesses rooted in trust, commitment, and long-term impact.Balasaheb Pandarinath Borade leads with clarity.</p>",
     verticletext: "chairman",
     image: chairman,
   },

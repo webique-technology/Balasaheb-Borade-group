@@ -27,8 +27,8 @@ const AboutUs = () => {
 
 
     const directorSlides = [
-        { src: mrBorade, name: "BalaSaheb P. Borade" },
-        { src: placeOne, name: "Savita Balasaheb Borade" },
+        { src: mrBorade, name: "Shree. BalaSaheb P. Borade" },
+        { src: placeOne, name: "Smt. Savita Balasaheb Borade" },
         
     ];
 

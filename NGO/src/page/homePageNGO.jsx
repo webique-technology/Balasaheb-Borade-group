@@ -28,7 +28,7 @@ import CausesSec from "../components/causesSec.jsx";
 
 import evelynDevin1 from "../assets/images/chairman.png"
 import evelynDevin2 from "../assets/images/placeholder.png"
-import crisBela1 from "../assets/images/placeholder.png"
+import crisBela1 from "../assets/images/savita-borade.png"
 import crisBela2 from "../assets/images/placeholder.png"
 import ServicesSec from "../components/services.jsx";
 

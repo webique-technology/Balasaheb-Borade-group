@@ -17,7 +17,7 @@ const aboutCardData = [
     {
         src: traditionalSvg,
         title: "Prepared Traditionally",
-        desc: "Rich colour and bold flavour from premium chillies chillies.",
+        desc: "Rich colour and bold flavour from premium chillies.",
         classR: ""
     },
     {

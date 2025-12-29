@@ -62,11 +62,11 @@ const MasaleAbout = () => {
                     </Col>
                     <Col sm={12} lg={6} className="masala-img mt-4 mt-lg-0">
                         <Row>
-                            <Col sm={6} className="justify-content-end">
+                            <Col sm={5} className="justify-content-end">
                                 <img src={aboutMasala1} alt="" className="about-img-1  d-none d-md-flex " />
                                 <img src={aboutMasala2} alt="" className="h-100 d-none d-sm-block d-md-none" />
                             </Col>
-                            <Col sm={6}>
+                            <Col sm={7}>
                                 <div className="sb-main position-relative ">
                                     <img src={SBorade} alt="" className=""/>
                                     <div className="s-borade">

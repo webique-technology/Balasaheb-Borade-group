@@ -7,8 +7,8 @@ import { Navbar, Row, Col, Nav } from "react-bootstrap";
 import call from "../assets/images/telephone.png"
 import "../style/navbar.scss";
 // import logo from "../assets/imgaes/logo.png";
-import masaleLogo from "../assets/images/sm-logo-new.png"
-import masalaLogo2 from "../assets/images/sm-logo-2.jpg"
+import masaleLogo from "../assets/images/savita-lgo-one.svg"
+import masalaLogo2 from "../assets/images/savita-lgo-two.svg"
 import { SideBar } from "./sidebar";
 import boradeLogo from "../assets/images/borade-logo.png"
 

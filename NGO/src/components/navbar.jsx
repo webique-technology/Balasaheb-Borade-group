@@ -29,7 +29,7 @@ const NavigationBar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
 
-    const sections = ["home", "about", "services", "Gallary", "contact"];
+    const sections = ["home", "about", "services", "gallary", "contact"];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -100,7 +100,7 @@ const NavigationBar = () => {
                                     />
                                 </div>
                                 {/* ham btn */}
-                                <a href="#" className="home-btn" title="https://balasahebboradegroup.com/">
+                                <a href="https://balasahebboradegroup.com/" className="home-btn" title="balasaheb borade group">
                                         <img src={webLgo} />
                                     </a>
                                 <div className="ham-btn d-block d-lg-none">

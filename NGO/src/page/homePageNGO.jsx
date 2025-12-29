@@ -153,7 +153,7 @@ const HomePageNGO = () => {
             </section>
 
 
-            <section className="causes-sec section-padding" id="goals">
+            <section className="causes-sec section-padding" id="gallary">
                 <CausesSec />
             </section>
 

@@ -5,7 +5,7 @@ import { FaHome } from "react-icons/fa";
 import "../style/navbar.scss";
 import { PrimeryBtn, WebsiteButton } from "./shared/button";
 import { SideBar } from "./sidebar";
-import logo from "../assets/images/logo_sb.png";
+import logo from "../assets/images/sb-realtors-lgo.svg";
 
 import webLgo from "../assets/images/borade-logo.png";
 
@@ -96,7 +96,7 @@ const NavigationBar = () => {
 
                                 </div>
 
-                  
+                     
 
                                     <a href="https://balasahebboradegroup.com/" target="_blank" className="home-btn" title="balasaheb borade group">
                                         <img src={webLgo} />

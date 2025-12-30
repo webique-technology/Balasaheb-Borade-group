@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import btnArrow from "../../assets/images/button-arrow.png"
 import { HiOutlineHome } from "react-icons/hi2";
+
+
+
 export const PrimeryBtn = ({ title, href, btnClass }) => {
 
     const iconVariants = {

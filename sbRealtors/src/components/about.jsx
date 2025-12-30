@@ -26,11 +26,16 @@ const AboutUs = () => {
 
 
 
-    const directorSlides = [
-        { src: mrBorade, name: "Shree. BalaSaheb P. Borade" },
-        { src: placeOne, name: "Smt. Savita Balasaheb Borade" },
-        
-    ];
+ const directorSlides = [
+    {
+        src: mrBorade,
+        name: "<span>Director</span><br/>Shree. BalaSaheb P. Borade",
+    },
+    {
+        src: placeOne,
+        name: "<span>Co. Director</span><br/>Smt. Savita Balasaheb Borade",
+    },
+];
 
 
     const stats = [
@@ -108,7 +113,12 @@ const AboutUs = () => {
                                     <img src={slide.src} alt={slide.name} />
                                     <div className="director-count">
                                         {/* <p className="m-0">Director</p> */}
-                                        <p className="m-0">{slide.name}</p>
+                              
+
+                                          <p
+            className="director-name m-0"
+            dangerouslySetInnerHTML={{ __html: slide.name }}
+        />
                                     </div>
                                 </SwiperSlide>
                             ))}

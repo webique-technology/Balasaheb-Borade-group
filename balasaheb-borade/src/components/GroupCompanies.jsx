@@ -11,10 +11,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // company logo
-import spInfraLogo from "../assets/images/sp_infra_logo.png"
-import savitaMasaleLogo from "../assets/images/sm-logo.png"
-import sbRealtor from "../assets/images/logo_sb.png"
-import logoNGO from "../assets/images/ngo_logo.png"
+import spInfraLogo from "../assets/images/shree-pandhari-lgo.svg"
+import savitaMasaleLogo from "../assets/images/savita-logo.svg"
+import sbRealtor from "../assets/images/sb-lgo.svg"
+import logoNGO from "../assets/images/ngo-lgo.svg"
 import IdcLogo from "../assets/images/id_logo_blue.png"
 
 // Animation Variants...

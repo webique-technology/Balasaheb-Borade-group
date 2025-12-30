@@ -72,10 +72,10 @@ const HeroBanner = () => {
         spaceBetween={0}
         effect="fade"
         loop
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{ clickable: true }}
         modules={[EffectFade, Autoplay]}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}

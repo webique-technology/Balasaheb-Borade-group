@@ -3,21 +3,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Container, Tab, Tabs } from "react-bootstrap";
 import { AnimateResponsive } from "./shared/animation";
 
-import wpIMG1 from "../assets/images/sb_img_7.jpg"
-import wpIMG2 from "../assets/images/sb_img_4.jpg"
-import wpIMG3 from "../assets/images/wp_img_3.png"
-import wpIMG4 from "../assets/images/sb_img_11.webp"
-import wpIMG5 from "../assets/images/sb_img_7.jpg"
-import wpIMG6 from "../assets/images/wp_img_6.png"
+import wpIMG1 from "../assets/images/wip/work-in-hand-1.jpg"
+import wpIMG2 from "../assets/images/wip/work-in-hand-2.jpg"
+import wpIMG3 from "../assets/images/wip/work-in-hand-4.jpg"
+import wpIMG4 from "../assets/images/wip/work-in-hand-3.jpg"
+import wpIMG5 from "../assets/images/wip/work-in-hand-5.jpg"
+import wpIMG6 from "../assets/images/wip/work-in-hand-6.jpg"
 
 // project completed
 
-import pcVer1 from "../assets/images/pc-ver-1.png"
-import pcVer2 from "../assets/images/pc-ver-2.png"
-import pcVer3 from "../assets/images/pc-ver-3.png"
-import pcHor1 from "../assets/images/pc-hor-1.png"
-import pcHor2 from "../assets/images/pc-hor-2.png"
-import pcHor3 from "../assets/images/pc-hor-3.png"
+import pcVer1 from "../assets/images/wip/done-11.jpg"
+import pcVer2 from "../assets/images/wip/done-12.jpg"
+import pcVer3 from "../assets/images/wip/done-13.jpg"
+import pcVer4 from "../assets/images/wip/done-14.jpg"
+import pcVer5 from "../assets/images/wip/done-15.jpg"
+import pcVer6 from "../assets/images/wip/done-16.jpg"
 
 const pageVariants = {
   enterLeft: { opacity: 0, x: -60 },
@@ -68,12 +68,6 @@ const workInHandCards = [
 
 const completedCards = [
   {
-    img: pcHor1,
-    title: "Completed Work - Swami Pride Apartment Pathardi Phata, Nashik",
-    extraClass: ""
-    /*cost: "Rs.3.5 Crores"*/
-  },
-  {
     img: pcVer1,
     title: "Completed Work - Swami Pride Apartment Pathardi Phata, Nashik",
     extraClass: ""
@@ -86,19 +80,25 @@ const completedCards = [
     /*cost: "Rs.3.5 Crores"*/
   },
   {
-    img: pcHor2,
+    img: pcVer4,
     title: "Completed Work - Swami Pride Apartment Pathardi Phata, Nashik",
     extraClass: ""
     /*cost: "Rs.3.5 Crores"*/
   },
   {
-    img: pcHor3,
+    img: pcVer3,
+    title: "Completed Work - Swami Pride Apartment Pathardi Phata, Nashik",
+    extraClass: ""
+    /*cost: "Rs.3.5 Crores"*/
+  },
+  {
+    img: pcVer5,
     title: "Completed Work - Swami Pride Apartment Pathardi Phata, Nashik",
     extraClass: "d-none d-sm-block"
     /*cost: "Rs.3.5 Crores"*/
   },
   {
-    img: pcVer3,
+    img: pcVer6,
     title: "Completed Work - Swami Pride Apartment Pathardi Phata, Nashik",
     extraClass: "d-none d-sm-block"
     /*cost: "Rs.3.5 Crores"*/

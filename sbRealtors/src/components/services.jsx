@@ -29,7 +29,7 @@ const accordionData = [
   { id: 2, title: "Buying Properties", content: "Our company has a wide range of properties and collaborations...", image: image2, sm: 6 },
   { id: 3, title: "Property Sales Support", content: "Selling and buying a property needs a lot of dedication and time. Adding to this there...", image: image3, sm: 6 },
   { id: 4, title: "Requirement Matching Service", content: "We match your needs with the best available properties.", image: image4, sm: 6 },
-  { id: 5, title: "Rental Property", content: "We provides you with the best properties for rent. We have varieties of properties for our customers and clients to choose from", image: image5, sm: 12 },
+  // { id: 5, title: "Rental Property", content: "We provides you with the best properties for rent. We have varieties of properties for our customers and clients to choose from", image: image5, sm: 12 },
 ];
 
 // const accordionData = [
@@ -70,7 +70,7 @@ const ServicesSec = () => {
               initial="hidden"
               whileInView="visible"
             >
-              Services
+              Services We Provide
             </motion.h2>
 
             <motion.p variants={fadeUp} initial="hidden" whileInView="visible">
@@ -99,7 +99,7 @@ const ServicesSec = () => {
           </Col>
 
           {/* ---------------------- RIGHT COLUMN ---------------------- */}
-          <Col sm={12} md={6} lg={5} className="d-flex align-items-end justify-content-center">
+          <Col sm={12} md={5} lg={5} className="d-flex align-items-end justify-content-center">
             <motion.div className="images-wrap" variants={fadeUp} initial="hidden" whileInView="visible">
 
               {/* Desktop/Tablet Image */}

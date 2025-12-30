@@ -1,3 +1,6 @@
+
+
+
 import React, { useState, useEffect, Activity } from "react";
 // import { FaArrowUp } from "react-icons/fa6";
 // import { PrimeryBtn } from "../components/shared/button";
@@ -7,7 +10,7 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import "../style/navbar.scss";
 import { PrimaryBtn } from "./shared/button";
 import { SideBar } from "./sidebar";
-import logo from "../assets/images/ngo_logo.png";
+import logo from "../assets/images/ngo-lgo.svg";
 import webLgo from "../assets/images/borade-logo.png";
 // import masaleLogo from "../assets/images/savita_masale_logo.png"
 // import { SideBar } from "./sidebar";
@@ -100,7 +103,7 @@ const NavigationBar = () => {
                                     />
                                 </div>
                                 {/* ham btn */}
-                                <a href="https://balasahebboradegroup.com/" className="home-btn" title="balasaheb borade group">
+                                <a href="#" className="home-btn" title="https://balasahebboradegroup.com/">
                                         <img src={webLgo} />
                                     </a>
                                 <div className="ham-btn d-block d-lg-none">
